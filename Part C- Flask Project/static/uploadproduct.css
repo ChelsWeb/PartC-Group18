@@ -1,0 +1,54 @@
+/* Base styles, assuming that you are using the same base styles as myaccount.css */
+.uploadCont{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body{
+    background-color: #efead6;
+}
+.upload-post-header{
+    text-align: center;
+    /* If you have more styling for your headers in myaccount.css, replicate it here */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* If you have a specific class for labels in myaccount.css, replicate it here */
+/* Otherwise, you can style the <label> directly */
+label {
+    font-weight: bold;
+    /* Any additional label styling from myaccount.css */
+}
+
+/* The input styling is taken directly from myaccount.css */
+/* It applies to all input types including text and file */
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Add any additional styles for text input from myaccount.css */
+}
+
+/* Replicate the button styling from myaccount.css */
+.upload-button {
+    padding: 10px 20px;
+    background-color: #bab393; /* Change to match the myaccount.css button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Add any hover effects or additional button styling from myaccount.css */
+}
+
+.upload-button:hover {
+    background-color: #0056b3; /* Change to match the myaccount.css button hover color */
+}

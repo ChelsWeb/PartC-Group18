@@ -1,0 +1,107 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container for each section */
+.centered-heading, .dropDown, .location, .post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: block;
+}
+
+/* Styling headings */
+h1, h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* Dropdown styles */
+.dropDown label, .location label {
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.dropDown select, .location input[type="text"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Location input styles */
+.location {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.location input[type="text"] {
+    margin-right: 10px;
+}
+
+/* Button inside location */
+.location button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.location button:hover {
+    background-color: #0056b3;
+}
+
+/* Post item styles */
+.post {
+    position: relative;
+}
+
+.pics {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.ButCont {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.ButCont button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.heartBut img {
+    width: 32px; /* or the size you prefer */
+}
+

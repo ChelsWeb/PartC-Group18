@@ -1,0 +1,21 @@
+@import "variables.css";
+
+/** { box-sizing: border-box; }*/
+
+body {
+    background-color: #efead6;
+    margin: 0;
+    font-family: var(--xsite-font-family);
+}
+
+a[href] {
+    color: #333;
+}
+
+a[href]:visited {
+    color: #333;
+}
+
+a[href]:active {
+    color: #bab393;
+}

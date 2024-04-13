@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Favorites' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('favorites.static', filename='css/favorites.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    {% if session.get('logged_in') %}
+        <div class="FavCont">
+            <h1>Favorites</h1>
+        </div>
+        {% for post in favorites %}
+           <div class="post {{ post.category }}" data-location="{{ post.location }}" data-id="{{ post.id }}">
+            <img class="pics" src="{{ url_for('explore.static', filename=post.image_filename) }}" alt="{{ post.category }}"/>
+            <div class="post-info">
+                <span class="price">{{ post.price }}</span>
+                <div class="ButCont">
+                <button class="heartBut" onclick="toggleFavorite('{{ post.id }}', this)">
+                     <img src="{{ url_for('explore.static', filename=post.like_filename) }}" alt="like">
+                </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <h3>Sign in first</h3>
+    {% endif %}
+{% endblock %}
+
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('favorites.static', filename='js/favorites.js') }}"></script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

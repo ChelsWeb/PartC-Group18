@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Registration' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('registration.static', filename='css/registration.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    <div class="logo">
+         <img id="logo" src="{{ url_for('static', filename='hanger.png') }}" alt="Logo">
+    <br>
+</div>
+    <h2>Registiration</h2>
+    <form method="POST" action="/registration" id="RegisterForm" class="form">
+        <div class="container">
+             <label class="fill">Full Name : </label>
+            <input class="box" type="text" id="fullName" pattern="[A-Za-z ]+" name="name" placeholder="Enter your Full Name">
+        </div>
+
+        <br>
+        <div class="container">
+        <label class="fill">City : </label>
+        <input class="box" type="text" id="city" name="city" pattern="[A-Za-z ]+" placeholder="Enter your City">
+    </div>
+    <br>
+    <div class="gender">
+        <label>Gender : </label>
+        <input class="box" type="checkbox" id="female" name="female" value="female">
+        <label>Female</label>
+        <input class="box" type="checkbox" id="male" name="male" value="male">
+        <label>Male</label>
+    </div>
+    <br>
+        <div class="Lcontainer">
+        <label class="LogLabel">Email: </label>
+        <input class="box" id="email" type="text" name="email" placeholder="Enter your E-mail">
+
+    </div>
+        <br>
+        <div class="Lcontainer">
+        <label class="LogLabel">Password: </label>
+        <input class="box" id="password" type="text" name="password" placeholder="Enter your Password">
+
+    </div>
+        <br>
+        <br>
+        <div class="Lcontainer">
+            <input type="submit" name="Submit">
+    </div>
+
+</form>
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('my_account.static', filename='js/registration.js') }}"></script>
+{% endblock %}

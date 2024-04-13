@@ -1,0 +1,75 @@
+
+/*for post*/
+
+/* Base and layout styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #efead6;
+    margin: 0;
+
+    color: #333;
+}
+
+.FavCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+}
+
+h1 {
+    margin: 1em 0 0.5em; /* Adjust top and bottom margins as needed */
+}
+
+/* Post styles */
+.post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 1em auto; /* Adds margin to the top and bottom, centers horizontally */
+    padding: 20px;
+    max-width: 300px; /* Or whatever width matches your design */
+    width: 100%; /* Allows it to be responsive */
+    box-sizing: border-box; /* Includes padding in width */
+}
+
+/* Image and price styles */
+.pics {
+    width: 100%;
+    display: block;
+    border-radius: 8px; /* Matches the .post border-radius */
+    aspect-ratio: 3 / 2; /* Maintain aspect ratio */
+    object-fit: cover; /* Covers the block without stretching */
+}
+
+.post-info {
+    position: relative; /* Establishes a containing block for absolute children */
+}
+
+.price {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Button and heart icon styles */
+.ButCont {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.heartBut {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.heartBut img {
+    width: 32px;
+    height: auto;
+}

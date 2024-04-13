@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'My Account' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('my_account.static', filename='css/my_account.css') }}"/>
+{% endblock %}
+
+{% block page_body_main_content %}
+    {% if session.get('logged_in') %}
+    <div class="AccountCont">
+        <h1 class="accountHeader">My Account</h1>
+        <div class="form-group">
+            <label class="AccountLabel" for="profile-pic">Add Profile Picture:</label>
+            <input type="file" id="profile-pic" accept="image">
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input class="accounText" type="text" id="name" value="{{ user.username }}">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input class="accounText" type="text" id="email" value="{{ user.email }}">
+        </div>
+        <div class="form-group">
+            <label class="fill">Password: </label>
+            <input class="accounText" type="text" id="password" name="password" placeholder="New Password">
+        </div>
+        <button class="AccountBut">Save Changes</button>
+            <a href="{{ url_for('uploadproduct.index') }}">
+        <button class="AccountBut" >Upload New Product</button>
+        </a>
+    </div>
+    {% else %}
+    <h3> Sign in first</h3>
+{% endif %}
+{% endblock %}
+
+{% block page_body_footer %}{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('my_account.static', filename='js/my_account.js') }}"></script>
+{% endblock %}

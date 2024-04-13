@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% set page_head_title = 'Explore' %}
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('explore.static', filename='explore.css') }}"/>
+{% endblock %}
+
+
+{% set page_head_title = 'Explore' %}
+
+{% block page_body_main_content %}
+{% if session.get('logged_in') %}
+    <h3>Welcome {{ session.get('email') }}</h3>
+    <div class="centered-heading">
+       <h1 >Explore</h1>
+</div>
+    <div class="dropDown">
+    <label >Choose a category:</label>
+    <select id="category" name="categories">
+        <option value="All">All</option>
+        <option value="Jackets">Jackets</option>
+        <option value="Shirts">Shirts</option>
+        <option value="Sweatshirts">Sweatshirts</option>
+        <option value="Jewelery">Jewelery</option>
+        <option value="Pants">Pants</option>
+    </select>
+    </div>
+    <div class="location">
+        <label >Enter your location:</label>
+        <input type="text" id="locationInput" name="location">
+        <button onclick="cancelLocationFilter()">Cancel</button>
+    </div>
+    <div class="posts-container">
+    {% for post in posts %}
+        <div class="post {{ post.category }}" data-location="{{ post.location }}" data-id="{{ post.id }}">
+            <img class="pics" src="{{ url_for('explore.static', filename=post.image_filename) }}" alt="{{ post.category }}"/>
+            <div class="post-info">
+                <span class="price">{{ post.price }}</span>
+                <div class="ButCont">
+                <button class="heartBut" onclick="toggleFavorite('{{ post.id }}', this)">
+                     <img src="{{ url_for('explore.static', filename=post.like_filename) }}" alt="like">
+                </button>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    {% else %}
+    <h3> Sign in first</h3>
+{% endif %}
+{% endblock %}
+{% block page_body_js %}
+<script src="{{ url_for('explore.static', filename='explore.js') }}"></script>
+{% endblock %}
+

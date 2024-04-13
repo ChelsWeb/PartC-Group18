@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="{{ url_for('main_menu.static', filename='css/main-menu.css') }}"/>
+
+
+<header>
+    <a href="/explore">Explore</a>
+    <a href="/favorites">Favorites</a>
+    <a href="/my_account">My account</a>
+    {% if session.get('logged_in') %}
+        <a href="/logout">Logout</a>
+    {% else %}
+        <a href="/">Login</a>
+    {% endif %}
+
+</header>

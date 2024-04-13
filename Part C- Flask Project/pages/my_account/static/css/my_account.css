@@ -1,0 +1,43 @@
+.AccountCont{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.accountHeader{
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.AccountLabel {
+    font-weight: bold;
+}
+.accounText {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.AccountBut {
+    padding: 10px 20px;
+    background-color: #bab393;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.AccountBut:hover {
+    background-color: #0056b3;
+}
+
